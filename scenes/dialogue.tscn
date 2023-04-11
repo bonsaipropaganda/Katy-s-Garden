@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxfjhf4tuoaee"]
+
+[ext_resource type="Texture2D" uid="uid://cndh17utmlqbq" path="res://art/Dialogue one.png" id="1_lj7bo"]
+[ext_resource type="Texture2D" uid="uid://33li04mibh8f" path="res://art/Dialogue two.png" id="2_57rlv"]
+[ext_resource type="Script" path="res://scripts/Dialogue.gd" id="2_aaefo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0w4hy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lj7bo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_57rlv")
+}],
+"loop": true,
+"name": &"1",
+"speed": 0.5
+}]
+
+[node name="Dialogue" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_0w4hy")
+animation = &"1"
+script = ExtResource("2_aaefo")
